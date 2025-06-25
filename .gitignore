@@ -46,6 +46,8 @@ CodeCoverage/
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
+
+.vs/
 [Bb]uild[Ll]og.*
 
 # NUnit

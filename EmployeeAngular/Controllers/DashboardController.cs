@@ -24,10 +24,12 @@ namespace EmployeeAngular.Controllers
                 TotalDoctors = _context.Doctors.Count(),
                 TotalPatients = _context.Patients.Count(),
                 AppointmentsToday = _context.Appointments
-                    .Count(a => a.AppointmentDate.Date == today)
+                    .Count(a => a.AppointmentDate >= today && a.AppointmentDate < today.AddDays(1))
             };
 
             return Ok(stats);
         }
+
+
     }
 }
